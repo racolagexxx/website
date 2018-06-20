@@ -1,0 +1,6 @@
+node_modules
+*~
+config.js
+.DS_Store
+*.map
+npm-debug.log

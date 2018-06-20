@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Racolage</title>
+  <meta charset="utf-8" />
+
+  <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:400,400italic,700italic,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Cutive+Mono&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      $('.about a').click(function(event) {
+        event.preventDefault()
+        $('#main').fadeOut(function() { $('#moreInfos').fadeIn() })
+      })
+    })
+  </script>
+
+  <style type="text/css">
+    body {
+      font-family: 'Cutive Mono', monospace;
+      font-size: 20px;
+      text-align: justify;
+    }
+    body, #moreInfos .content {
+      width: 70%;
+      margin: auto;
+    }
+    p {
+      margin: 0;
+      padding: 0;
+    }
+    quote {
+      position: relative;
+      margin-right: 0.1em;
+      line-height: 1.2em;
+      padding-left: 1.5em;
+    }
+    quote > a, quote > a:visited, .about a {
+      text-transform: none;
+      font-weight: normal;
+      color: blue;
+      font-size: 75%;
+      font-style: italic;
+    }
+    .doubleQuoteOpen {
+      font-size: 300%;
+      color: #666;
+      position: absolute;
+      left: -0.2em;
+      top: 0.15em;
+    }
+    .doubleQuoteClose {
+      display: none;
+      position: absolute;
+      font-size: 150%;
+    }
+    .clearfix {
+      width: 100%;
+      height: 0;
+      display: block;
+      clear: both;
+    }
+    .images {
+      padding: 0.5em 0;
+      margin: 1em 0;
+      text-align: center;
+      background-color: black;
+    }
+    .images img {
+      width: 70%;
+      background-color: white;
+    }
+    .images.twoImages img {
+      width: 40%;
+      background-color: white;
+    }
+    .about {
+      font-family: 'Anonymous Pro', monospace;
+      font-size: 150%;
+      text-transform: uppercase;
+      margin: 1em 0;
+    }
+    .about span {
+      font-weight: bold;
+    }
+    .about a {
+      font-size: 50%;
+    }
+    #moreInfos {
+      display: none;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      top: 0;
+      left: 0;
+      overflow: auto;
+    }
+    #moreInfos .content {
+      padding-bottom: 2em;
+    }
+    #moreInfos .content quote {
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="main">
+    <p class="about">
+      <span>Racolage</span> is a record label that releases only by spam email. <a href="">[read more]</a>
+    </p>
+
+    <p>
+      <quote>
+      <i class="doubleQuoteOpen">“</i>When people leave your show, are they going to remember you as that person with good lyrics and a good voice? Or will they remember you as that person who stood out and outshone all the other performing acts that night?<i class="doubleQuoteClose">”</i> <a href="http://www.musicthinktank.com/blog/how-to-promote-your-music-the-ultimate-guide.html">[read more]</a>
+      </quote>
+
+      <quote>
+      <i class="doubleQuoteOpen">“</i>As a musician you want to be able to reach your target audience. You want to be the name on everyone’s lips. You want your brand of music to hit the airwaves and make instant impact. [...] The opportunity to have the crowds cheering and chanting your name as you become as necessary as air to your teeming fans beckons.<i class="doubleQuoteClose">”</i> <a href="http://www.music-promotion.net/">[read more]</a>
+      </quote>
+    </p>
+
+    <p class="images twoImages">
+      <img src="images/about-images/dont-pretend-you-dont-want-me.jpg">
+      <img src="images/about-images/your-band-is-a-virus.jpg">
+    </p>
+
+    <p>
+      <quote>
+      <i class="doubleQuoteOpen">“</i>Musicians today are accustomed to waiting in line for just about everything. After all, it’s busy as hell out there. While it’s necessary to wait in some lines, and good results can come of that, if you merely play by the rules and wait in lines you’ll get stagnancy, and that isn’t a very fun gift to open up for Christmas.<i class="doubleQuoteClose">”</i> <a href="http://www.musicthinktank.com/blog/11-reasons-why-your-music-self-promotion-isnt-working.html">[read more]</a>
+      </quote>
+
+      <quote>
+      <i class="doubleQuoteOpen">“</i>What separates you from the many posers is your amazing music. Your thing. Your spin.<i class="doubleQuoteClose">”</i> <a href="http://www.edmmagazine.com/feature/how-to-promote-your-edm-songs-without-spamming-everyone">[read more]</a>
+      </quote>
+
+      <quote>
+      <i class="doubleQuoteOpen">“</i>Breaking out in the music business is hard, especially online where everyone and their cousin has a band and a website promoting it.<i class="doubleQuoteClose">”</i> <a href="http://smallbusiness.chron.com/promote-music-successfully-internet-downloads-48639.html">[read more]</a>
+      </quote>
+
+      <quote>
+      <i class="doubleQuoteOpen">“</i>Music marketing is a rapidly evolving challenge in a saturated industry; so how can you successfully promote your music online?<i class="doubleQuoteClose">”</i> <a href="http://www.orchard.co.uk/Blog/I-want-to-be-famous-How-to-promote-your-music-online-3889.aspx">[read more]</a>
+      </quote>
+
+      <quote>
+      <i class="doubleQuoteOpen">“</i>When you invest your time and money into your music there should be an effective outcome.<i class="doubleQuoteClose">”</i> <a href="http://mp3waxx.com/promote-your-music/">[read more]</a>
+      </quote>
+    </p>
+
+    <p class="images">
+      <img src="images/about-images/spamming-lord-much-on-soundcloud.jpg">
+    </p>
+
+    <p>
+      <quote>
+      <i class="doubleQuoteOpen">“</i>First off, let’s be realistic, not all music is good music, so the results may vary for those who have not quite honed your craft. However, if you have the ambition and the know-how, you can take your career to new heights with less effort than you think. For those of you with raw talent, your music just needs to be heard by as many people as possible, and the rest will be history.<i class="doubleQuoteClose">”</i> <a href="http://milehimusic.com/top-12-ways-to-promote-your-music/">[read more]</a>
+      </quote>
+
+      <quote>
+      <i class="doubleQuoteOpen">“</i>The sad truth is that the quality of your music won't always be enough to get you noticed. Try doing a blog, a quiz, a gimmick – anything that will make your website or profile a bit different and interesting.<i class="doubleQuoteClose">”</i> <a href="http://www.musicradar.com/tuition/guitars/14-ways-to-promote-your-music-online-182713">[read more]</a>
+      </quote>
+
+      <p class="images">
+        <img src="images/about-images/soundcloud-buy-followers2.png">
+      </p>
+
+      <quote>
+      <i class="doubleQuoteOpen">“</i>One of the biggest misconceptions held by unsigned artists is that great music will always find its way to the masses. McDonald’s, Papa John’s and Subway do not make the best burgers, pizza or grinders, but they are most recognizable brands because they do the best job of MARKETING and PROMOTING their product. Your music is also a product and with every successful business venture, you need good branding.<i class="doubleQuoteClose">”</i> <a href="http://www.theindieauthority.com/top-18-ways-to-promote-your-music-in-2015/">[read more]</a>
+      </quote>
+
+      <quote>
+      <i class="doubleQuoteOpen">“</i>You should see that you're not just a musician or a band member but that you are a product. [...] Think of yourself as Jessica Simpson or Kim Kardashian. These women understand that they are brands and can put their names on a product, from shoes to lotion, knowing that it will sell big just because of who they are. <i class="doubleQuoteClose">”</i> <a href="http://www.wikihow.com/Promote-Your-Music">[read more]</a>
+      </quote>
+
+      <quote>
+      <i class="doubleQuoteOpen">“</i>I don't care if the ghost of 2Pac himself came back and made them songs for you. You need more product. <i class="doubleQuoteClose">”</i><a href="https://www.howtorapdrew.com/how-to-promote-your-music-rap-industry-secrets/">[read more]</a>
+      </quote>
+    </p>
+
+    <p class="images twoImages">
+      <img src="images/about-images/justin-biebers-girlfriend.jpg">
+      <img src="images/about-images/the-hammer.jpg">
+    </p>
+
+    <p>
+      <quote>
+      <i class="doubleQuoteOpen">“</i>The music business operates like any other business. You need to promote your product. The best and least expensive way to build any business is by <i class="doubleQuoteOpen">“</i>word of mouth<i class="doubleQuoteClose">”</i> and it is also the best way to build your brand in the music industry as well. This is a principle I used in my first management job operating a tax office. I was able to turn a dying office into one that saw the third highest growth in new clients in the country.<i class="doubleQuoteClose">”</i> <a href="http://www.theindieauthority.com/top-18-ways-to-promote-your-music-in-2015/">[read more]</a>
+      </quote>
+
+      <quote>
+      <i class="doubleQuoteOpen">“</i>Some [...] producers promote their music in an obnoxious, spammy way on social media. [...] Or, you have to wade through links to songs that aren’t even the kind of music you like. What a bunch of spam.
+      It’s irritating. It’s intrusive. It’s ineffective. It’s bad promotion.<i class="doubleQuoteClose">”</i> <a href="http://www.edmmagazine.com/feature/how-to-promote-your-edm-songs-without-spamming-everyone">[read more]</a>
+      </quote>
+
+      <quote>
+      <i class="doubleQuoteOpen">“</i>It's 2015, homey. You HAVE to know how to navigate the social media game or in many cases... you're dead in the water.<i class="doubleQuoteClose">”</i> <a href="https://www.howtorapdrew.com/how-to-promote-your-music-rap-industry-secrets/">[read more]</a>
+      </quote>
+    </p>
+
+    <p class="images">
+      <img src="images/about-images/enlarge-magic-wand.jpg">
+    </p>
+
+    <p>
+      <quote>
+      <i class="doubleQuoteOpen">“</i>If I told you there was a great way to promote your band all over the net, for free, you'd probably think, 'Yeah, what's the catch?' <i class="doubleQuoteClose">”</i> <a href="http://www.arkade.com/content/Content/Marketing+Your+Product/You've+got+to+be+seen+to+be+heard!!+Tips+on+how+to+link+to+your+site+on+Arkade">[read more]</a>
+      </quote>
+
+      <quote>
+      <i class="doubleQuoteOpen">“</i>Music artists who are just starting out need to find some of the easiest ways of getting their music online and promoting it for the most success. It can now be done from the comfort of your own home, which makes your promotion easy and cheap.<i class="doubleQuoteClose">”</i> <a href="http://www.heartbeatmuzic.com/promote-your-music-2/">[read more]</a>
+      </quote>
+    </p>
+
+    <p class="images twoImages">
+      <img src="images/about-images/spam-computer.jpg">
+      <img src="images/about-images/dont-email-my-wife.jpg">
+    </p>
+
+    <p class="about">
+      <span>Racolage</span> is a record label that releases only by spam email. <a href="">[read more]</a>
+    </p>
+  </div>
+
+  <div id="moreInfos">
+
+    <div class="content">
+      <h1>Racolage</h1>
+      <p>
+        <span>Racolage</span> is a label that releases experimental music through spam email. Each release is a single track, sent to 1 000 000 random email addresses collected with the same techniques used by usual spammers.
+      </p>
+
+      <p class="images">
+        <img src="images/rpi-farm2.jpg">
+      </p>
+
+      <p>
+        These little computers in the picture above work 24h / 7 days a week to scrape email addresses from the Internet. So far they have collected <span id="emailCount">####</span> of them (and counting).
+      </p>
+
+      <p>
+        <br>
+        <quote><i class="doubleQuoteOpen">“</i>Meet horny listeners from your neighborhood!</quote>
+        <quote><i class="doubleQuoteOpen">“</i>Cum straight to their mailbox</quote>
+        <quote><i class="doubleQuoteOpen">“</i>Enlarge your fanbase</quote>
+      </p>
+    </div>
+
+  </div>
+
+</body>
+</html>

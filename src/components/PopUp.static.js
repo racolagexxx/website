@@ -57,7 +57,7 @@ module.exports = component(__filename, ({ getClassName, createStyleSheet }) => {
         },
 
         '& .container .close': {
-          backgroundImage: "url('../images/close1.svg')"
+          backgroundImage: "url('./images/close1.svg')"
         }
 
       },
@@ -76,7 +76,7 @@ module.exports = component(__filename, ({ getClassName, createStyleSheet }) => {
         },
 
         '& .container .close': {
-          backgroundImage: "url('../images/close2.svg')"
+          backgroundImage: "url('./images/close2.svg')"
         }
 
       }

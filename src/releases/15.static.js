@@ -16,6 +16,14 @@ module.exports = component(__filename, () => {
         image: { srcUrl: 'releases/15/screengrab1.jpg' }
       })}
 
+      ${ReleaseAnalyticsPopUp.renderHTML({
+        date: '23/07/2018',
+        table: [
+          ['Videos Uploaded', '10'],
+          ['Total Plays', '35 000']
+        ]
+      })}
+
       ${ReleaseCoverPopUp.renderHTML(attrs)}
     `
   }

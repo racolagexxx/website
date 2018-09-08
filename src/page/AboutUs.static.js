@@ -65,7 +65,7 @@ module.exports = component(__filename, ({ getClassName, createStyleSheet }) => {
               </p>
               <br />
               <p>
-                <b>racolage.xxx</b> is a record label that releases experimental music through spam email, tinder, fake movie streams and other spammy release channels...
+                <b>racolage.xxx</b> is a record label that releases experimental music through spam email, porn streaming sites, tinder, and other spammy release channels...
               </p>
 
               <p>Follow our activity and get more info from our <a href="https://www.facebook.com/racolage/" target="_blank">facebook</a> and <a href="https://twitter.com/racolagexxx" target="_blank">twitter</a> pages.</p>

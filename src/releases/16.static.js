@@ -6,6 +6,16 @@ module.exports = component(__filename, () => {
 
   const renderHTML = function(attrs) {
     return `
+      ${ReleaseAnalyticsPopUp.renderHTML({
+        date: '08/09/2018',
+        table: [
+          ['Emails Sent', '1 000 000'],
+          ['Total Plays', '355'],
+          ['Thumbs Up', '2'],
+          ['Thumbs Down', '9']
+        ]
+      })}
+
       ${ReleaseCoverPopUp.renderHTML(attrs)}
     `
   }

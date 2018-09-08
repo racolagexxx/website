@@ -114,7 +114,7 @@ module.exports = component(__filename, ({ getClassName, createStyleSheet }) => {
           ${PopUp.renderHTML(
             { variant: 'popup2' }, `
             <p>
-              If you are interested in releasing a track on racolage.xxx, contact us directly on facebook, twitter,
+              If you are interested in releasing a track with racolage.xxx, contact us directly on facebook, twitter,
               or send an email to <a href="mailto://racolagexxx@protonmail.com">racolagexxx@protonmail.com</a>
               (do not mention <b>racolage.xxx</b> in your email otherwise it will be classified as spam - no joke).
               Please provide the following :

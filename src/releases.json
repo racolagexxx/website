@@ -1,5 +1,17 @@
 [
     {
+        "id": 18,
+        "date": "28/10/2018",
+        "channels": [[ "porn-streaming" ], [ "branlr room" ]],
+        "tags": [],
+        "picture": {
+          "filetype": "gif",
+          "dimensions": [1000, 1000]
+        },
+        "title": "L;ç°°ç",
+        "text": "L;ç°°ç is a journey by a multifaceted artist who comes across avant-garde concepts and popular beliefs, in which very different aesthetic's can coexist. In his music there is a bit of him, a bit of his machine and a bit of you, some things he likes and others not too much, but it's all right because it's part of the game, the randomness."
+    },
+    {
         "id": 17,
         "date": "04/09/2018",
         "channels": [[ "porn-streaming" ]],
@@ -38,7 +50,7 @@
     {
         "id": 14,
         "date": "11/05/2018",
-        "channels": [[ "porn-streaming" ]],
+        "channels": [[ "porn-streaming" ], ["branlr room"]],
         "tags": [],
         "picture": {
           "filetype": "jpg",

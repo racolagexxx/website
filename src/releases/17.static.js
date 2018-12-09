@@ -17,12 +17,12 @@ module.exports = component(__filename, () => {
       })}
 
       ${ReleaseAnalyticsPopUp.renderHTML({
-          date: '04/11/2018',
+          date: '09/12/2018',
           table: [
             ['Videos Uploaded', '20'],
-            ['Total Plays', '19 000']  
+            ['Total Plays', '30 235']  
           ]
-        })}
+      })}
 
       ${ReleaseCoverPopUp.renderHTML(attrs)}
     `

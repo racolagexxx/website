@@ -1,5 +1,6 @@
 const { component } = require('../base.static')
 const ReleaseCoverPopUp = require('../components/ReleaseCoverPopUp.static')
+const ReleaseAnalyticsPopUp = require('../components/ReleaseAnalyticsPopUp.static')
 const PopUp = require('../components/PopUp.static')
 const MediaPopUp = require('../components/MediaPopUp.static')
 
@@ -32,6 +33,14 @@ module.exports = component(__filename, () => {
           allowfullscreen
         ></iframe>
       `)}
+
+      ${ReleaseAnalyticsPopUp.renderHTML({
+        date: '09/12/2018',
+        table: [
+          ['Videos Uploaded', '5'],
+          ['Total Plays', '2130']  
+        ]
+      })}
 
       ${PopUp.renderHTML(
         { variant: 'popup2' }, `

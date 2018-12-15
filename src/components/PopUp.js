@@ -1,12 +1,11 @@
 const $ = global.jQuery = require('jquery/dist/jquery.slim.js')
-const { BaseComponent, component } = require('../base')
+const declareJsComponent = require('~/declareJsComponent')
 
-module.exports = component(__filename, ({ getClassName }) => {
+module.exports = declareJsComponent(__filename, ({ getClassName }) => {
 
-  class PopUp extends BaseComponent {
+  class PopUp {
 
     constructor(element, opts = {}) {
-      super()
       this.opts = Object.assign({ mode: 'hide' }, opts)
       this.el = $(element)
 

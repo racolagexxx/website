@@ -17,8 +17,8 @@ releases.forEach(function(releaseData) {
   // Attach JS and HTML file names
 
   // Entry
-  releaseData.entryName = `release-details-${releaseData.id}`
-  releaseData.entryPath = `./src/releases/${releaseData.id}.static.js`
+  releaseData.entryName = `releases.${releaseData.id}.index.html`
+  releaseData.entryPath = `./src/components/releases/${releaseData.id}.index.html.js`
 
   // Output
   releaseData.jsFileName = `${releaseData.entryName}.js`

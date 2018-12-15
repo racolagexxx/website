@@ -1,7 +1,7 @@
-const { component } = require('../base.static')
+const declareStaticComponent = require('~/declareStaticComponent')
 const PopUp = require('./PopUp.static')
 
-module.exports = component(__filename, ({ getClassName, createStyleSheet }) => {
+module.exports = declareStaticComponent(__filename, ({ getClassName, createStyleSheet }) => {
 
   const renderHTML = (attrs) => {
     const rows = attrs.table.map(([ th, td ]) => {

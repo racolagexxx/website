@@ -1,7 +1,7 @@
-const { component } = require('../base.static')
-const theme = require('../theme')
+const declareStaticComponent = require('~/declareStaticComponent')
+const theme = require('~/theme')
 
-module.exports = component(__filename, ({ getClassName, createStyleSheet }) => {
+module.exports = declareStaticComponent(__filename, ({ getClassName, createStyleSheet }) => {
 
   const renderHTML = function(attrs) {
     return `

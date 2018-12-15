@@ -1,16 +1,16 @@
 const $ = global.jQuery = require('jquery/dist/jquery.slim.js')
-const { BaseComponent, fetchHTML, component } = require('../base')
+const declareJsComponent = require('~/declareJsComponent')
+const ajaxHelpers = require('~/ajax-helpers')
 const PopUp = require('./PopUp')
 const PopUpStack = require('./PopUpStack')
 
 const CONTAINER_ID = 'ReleaseDetailsContainer'
 
-module.exports = component(__filename, ({ getClassName }) => {
+module.exports = declareJsComponent(__filename, ({ getClassName }) => {
 
-  class ReleaseDetails extends BaseComponent {
+  class ReleaseDetails {
 
     constructor(el, opts) {
-      super()
       this.el = $(el)
       this.releaseContainer = $(opts.releaseContainer)
       this.moveAboveAll()
@@ -33,7 +33,7 @@ module.exports = component(__filename, ({ getClassName }) => {
       this.el.show()
 
       if (!this.fetchHTMLPromise)
-        this.fetchHTMLPromise = fetchHTML(this.el.data('htmlfilename'))
+        this.fetchHTMLPromise = ajaxHelpers.fetchHTML(this.el.data('htmlfilename'))
 
       this.fetchHTMLPromise.then((str) => {
         // Set the html for the popup stack and create JS components

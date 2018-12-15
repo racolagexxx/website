@@ -1,7 +1,8 @@
-const theme = require('../theme')
-const { renderAttrs, component } = require('../base.static')
+const theme = require('~/theme')
+const declareStaticComponent = require('~/declareStaticComponent')
+const htmlHelpers = require('~/html-helpers')
 
-module.exports = component(__filename, ({ getClassName, createStyleSheet }) => {
+module.exports = declareStaticComponent(__filename, ({ getClassName, createStyleSheet }) => {
 
   const renderHTML = function(opts, children) {
     const attrs = {
@@ -12,7 +13,7 @@ module.exports = component(__filename, ({ getClassName, createStyleSheet }) => {
     }
 
     return `
-      <div ${renderAttrs(attrs)}>
+      <div ${htmlHelpers.renderAttributes(attrs)}>
         <div class="container ${getClassName('container')}">
           ${opts.noClose ? '' : `<div class="close ${getClassName('close')}"></div>`}
           <div class="content">${children}</div>

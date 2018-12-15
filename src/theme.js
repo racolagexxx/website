@@ -25,10 +25,10 @@ exports.responsiveWidth = (baseWidth) => {
   return {
     width: `${baseWidth}%`,
     '@media screen and (max-width: 700px) and (min-width: 400px)': {
-      width: `${baseWidth + (100 - baseWidth) / 6}%`
+      width: `${baseWidth + (100 - baseWidth) / 2}%`
     },
     '@media screen and (max-width: 400px)': {
-      width: `${baseWidth + (100 - baseWidth) / 3}%`
+      width: `${baseWidth + (100 - baseWidth) / 2}%`
     }
   }
 }

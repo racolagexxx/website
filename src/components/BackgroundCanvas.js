@@ -1,15 +1,15 @@
 const $ = global.jQuery = require('jquery/dist/jquery.slim.js')
 
-const { BaseComponent, loadImage, component } = require('../base')
+const ajaxHelpers = require('~/ajax-helpers')
+const declareJsComponent = require('~/declareJsComponent')
 
-module.exports = component(__filename, ({ getClassName }) => {
+module.exports = declareJsComponent(__filename, ({ getClassName }) => {
 
   let imgElement
 
-  class BackgroundCanvas extends BaseComponent {
+  class BackgroundCanvas {
 
     constructor(canvas) {
-      super()
       this.el = $(canvas)
       const ctx = canvas.getContext('2d')
       const container = this.el.parent()
@@ -49,7 +49,7 @@ module.exports = component(__filename, ({ getClassName }) => {
   }
 
   BackgroundCanvas.loadBgImage = function() {
-    return loadImage(require('../images/header-bg.jpg'))
+    return ajaxHelpers.loadImage(require('~/images/header-bg.jpg'))
       .then((elem) => imgElement = elem)
   }
 

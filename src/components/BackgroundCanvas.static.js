@@ -1,13 +1,14 @@
-const { renderData, component } = require('../base.static')
-const theme = require('../theme')
+const declareStaticComponent = require('~/declareStaticComponent')
+const htmlHelpers = require('~/html-helpers')
+const theme = require('~/theme')
 
-module.exports = component(__filename, ({ getClassName, createStyleSheet }) => {
+module.exports = declareStaticComponent(__filename, ({ getClassName, createStyleSheet }) => {
 
   const renderHTML = function(attrs) {
     return `
       <canvas
         class="${getClassName()}"
-        ${renderData(attrs, ['squareSize', 'range', 'scrambleCount'])}
+        ${ htmlHelpers.renderDataAttributes(attrs, ['squareSize', 'range', 'scrambleCount'])}
       >
       </canvas>
     `

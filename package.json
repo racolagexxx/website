@@ -2,10 +2,10 @@
   "name": "racolage",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "start": "webpack --watch --mode=development",
-    "build": "webpack --mode=production"
+    "clean": "rm -f docs/releases/*/index.html; rm -f docs/js/* ; rm -f docs/index.html",
+    "start": "npm run clean; NODE_ENV=development node webpack.build.js",
+    "build": "npm run clean; NODE_ENV=production node webpack.build.js"
   },
   "author": "",
   "license": "ISC",
@@ -25,7 +25,7 @@
     "html-minifier": "^3.5.16",
     "jss": "^9.8.2",
     "jss-preset-default": "^4.5.0",
-    "webpack": "^4.9.1",
-    "webpack-cli": "^2.1.4"
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
   }
 }

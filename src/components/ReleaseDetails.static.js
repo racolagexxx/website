@@ -1,9 +1,9 @@
-const { BaseComponent, component } = require('../base.static')
+const declareStaticComponent = require('~/declareStaticComponent')
 const PopUp = require('./PopUp.static')
 const PopUpStack = require('./PopUpStack.static')
-const theme = require('../theme')
+const theme = require('~/theme')
 
-module.exports = component(__filename, ({ getClassName, createStyleSheet }) => {
+module.exports = declareStaticComponent(__filename, ({ getClassName, createStyleSheet }) => {
 
   const renderHTML = (attrs) => {
     return `

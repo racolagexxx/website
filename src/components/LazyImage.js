@@ -1,16 +1,15 @@
 const $ = global.jQuery = require('jquery/dist/jquery.slim.js')
-const { BaseComponent, component } = require('../base')
+const declareJsComponent = require('~/declareJsComponent')
 
-module.exports = component(__filename, ({ getClassName }) => {
+module.exports = declareJsComponent(__filename, ({ getClassName }) => {
 
   const lazyImagesMap = new WeakMap()
   let lazyImageObserver
 
 
-  class LazyImage extends BaseComponent {
+  class LazyImage {
 
     constructor(el) {
-      super()
       lazyImagesMap.set(el, this)
       this.el = $(el)
       lazyImageObserver.observe(this.el.get(0))

@@ -1,8 +1,9 @@
-const { renderAttrs, renderData, component } = require('../base.static')
+const declareStaticComponent = require('~/declareStaticComponent')
+const htmlHelpers = require('~/html-helpers')
 const PopUp = require('./PopUp.static')
-const theme = require('../theme')
+const theme = require('~/theme')
 
-module.exports = component(__filename, ({ getClassName, createStyleSheet }) => {
+module.exports = declareStaticComponent(__filename, ({ getClassName, createStyleSheet }) => {
 
   const renderHTML = function(opts, children) {
     const props = {
@@ -12,7 +13,7 @@ module.exports = component(__filename, ({ getClassName, createStyleSheet }) => {
     }
 
     return `
-      <div ${renderAttrs(props)} ${renderData(opts, ['reverse', 'variant', 'autoResize'])}>
+      <div ${htmlHelpers.renderAttributes(props)} ${htmlHelpers.renderDataAttributes(opts, ['reverse', 'variant', 'autoResize'])}>
         ${opts.resetButton ? `<div class="${getClassName('reset')}">
           <button>READ AGAIN</button>
         </div>`: ''}

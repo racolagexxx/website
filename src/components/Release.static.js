@@ -1,11 +1,10 @@
-const { toCSS } = require('../base.static')
-const PopUp = require('./PopUp.static')
+const htmlHelpers = require('~/html-helpers')
 const LazyImage = require('./LazyImage.static')
 const ReleaseDetails = require('./ReleaseDetails.static')
-const theme = require('../theme')
-const { component } = require('../base.static')
+const theme = require('~/theme')
+const declareStaticComponent = require('~/declareStaticComponent')
 
-module.exports = component(__filename, ({ getClassName, createStyleSheet }) => {
+module.exports = declareStaticComponent(__filename, ({ getClassName, createStyleSheet }) => {
 
   const IMG_WIDTH_VW = 25
 
@@ -32,7 +31,7 @@ module.exports = component(__filename, ({ getClassName, createStyleSheet }) => {
     return `
       <div
         class="${getClassName()}"
-        style="${toCSS(releaseStyle).toString()}"
+        style="${htmlHelpers.renderStyle(releaseStyle).toString()}"
       >
         <div class="${getClassName('subtitle')}">released ${d.date}</div>
         <div class="${getClassName('subtitle')}">${d.channelsDisplay}</div>
@@ -40,7 +39,7 @@ module.exports = component(__filename, ({ getClassName, createStyleSheet }) => {
           ${LazyImage.renderHTML({
             src: d.picture.srcUrl,
             placeholderSrc: 'images/logo2.svg',
-            style: toCSS(imgStyle).toString()
+            style: htmlHelpers.renderStyle(imgStyle).toString()
           })}
         </div>
         <div class="${getClassName('title')}">

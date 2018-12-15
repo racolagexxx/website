@@ -1,14 +1,13 @@
 const $ = global.jQuery = require('jquery/dist/jquery.slim.js')
 const imagesLoaded = require('imagesloaded')
-const { BaseComponent, component } = require('../base')
+const declareJsComponent = require('~/declareJsComponent')
 const PopUp = require('./PopUp')
 
-module.exports = component(__filename, ({ getClassName }) => {
+module.exports = declareJsComponent(__filename, ({ getClassName }) => {
 
-  class PopUpStack extends BaseComponent {
+  class PopUpStack {
 
     constructor(el) {
-      super()
       this.el = $(el)
       this.resetPopUps()
       this.el.find(`.${getClassName('reset')} button`)

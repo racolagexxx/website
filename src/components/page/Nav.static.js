@@ -33,7 +33,7 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
         zIndex: 20,
         width: '1em',
         borderRight: 'solid 0.15em transparent',
-        backgroundColor: 'rgba(255, 255, 255, 0.65)',
+        backgroundColor: 'rgba(255, 255, 255, 0.7)',
         '&.active': { borderColor: theme.colors.textRed },
         '&.left': { left: lateralOffset },
         '&.right': { right: lateralOffset },

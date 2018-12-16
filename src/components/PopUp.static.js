@@ -58,7 +58,8 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
         },
 
         '& .container .close': {
-          backgroundImage: "url('./images/close1.svg')"
+          backgroundImage: "url('./images/close1.svg')",
+          opacity: 0.45
         }
 
       },

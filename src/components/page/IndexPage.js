@@ -1,13 +1,15 @@
 const $ = global.jQuery = require('jquery/dist/jquery.slim.js')
 
 const declareJsComponent = require('~/declareJsComponent')
-const Nav = require('./Nav')
-const Header = require('./Header')
 const BackgroundCanvas = require('~/components/BackgroundCanvas')
 const LazyImage = require('~/components/LazyImage')
 const PopUp = require('~/components/PopUp')
 const PopUpStack = require('~/components/PopUpStack')
 const Release = require('~/components/Release')
+
+const Nav = require('./Nav')
+const Header = require('./Header')
+
 
 module.exports = declareJsComponent(__filename, ({ getClassName }) => {
 

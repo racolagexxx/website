@@ -48,7 +48,7 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
       },
 
       PopUp: {
-        extend: [ theme.responsiveText(120, 0.7) ],
+        extend: [ theme.responsiveText(120, 0.55) ],
         '& .container': {
           minHeight: '8em'
         },

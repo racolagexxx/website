@@ -1,8 +1,9 @@
 const theme = require('~/theme')
+const declareStaticComponent = require('~/declareStaticComponent')
 const BackgroundCanvas = require('~/components/BackgroundCanvas.static')
 const PopUp = require('~/components/PopUp.static')
 const PopUpStack = require('~/components/PopUpStack.static')
-const declareStaticComponent = require('~/declareStaticComponent')
+const SocialMedia = require('./SocialMedia.static')
 
 module.exports = declareStaticComponent(__filename, ({ getClassName, createStyleSheet }) => {
 
@@ -23,6 +24,7 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
                 racolage.xxx is a record label that releases experimental music through <u>spam</u>
               </h1>
             </a>
+            ${SocialMedia.renderHTML()}
           `)}
 
           ${PopUp.renderHTML(
@@ -33,7 +35,6 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
         `)}
       </header>
     `
-
   }
 
   const renderCSS = function() {
@@ -42,7 +43,12 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
       '': {
         extend: [ theme.centerFlexContent() ],
         height: '100%',
-        minHeight: '20em'
+        minHeight: '20em',
+
+        '& a, & a:visited': {
+          textDecoration: 'none',
+          color: theme.colors.textWhite
+        }
       },
 
       popUpContainer: {
@@ -76,12 +82,6 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
           '& .content': {
             padding: '0 2em',
             '@media screen and (max-width: 500px)': { padding: '0 0.5em' },
-
-            '& a.title': {
-              textDecoration: 'none',
-              color: theme.colors.textWhite
-            }
-
           }
         }
 

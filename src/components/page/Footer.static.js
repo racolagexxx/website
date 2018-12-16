@@ -1,7 +1,8 @@
-const BackgroundCanvas = require('~/components/BackgroundCanvas.static')
-const PopUp = require('~/components/PopUp.static')
 const theme = require('~/theme')
 const declareStaticComponent = require('~/declareStaticComponent')
+const BackgroundCanvas = require('~/components/BackgroundCanvas.static')
+const PopUp = require('~/components/PopUp.static')
+const SocialMedia = require('./SocialMedia.static')
 
 module.exports = declareStaticComponent(__filename, ({ getClassName, createStyleSheet }) => {
 
@@ -23,11 +24,7 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
               <div class="logo">
                 <img src="images/logo.svg">
               </div>
-              <div class="socialMedia">
-                <a href="https://www.facebook.com/racolage/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-                <a href="https://twitter.com/racolagexxx" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></i></a>
-                <a href="mailto:racolagexxx@protonmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-              </div>
+              ${SocialMedia.renderHTML()}
             </div>
           `)}
 
@@ -76,7 +73,7 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
         '& .logo': {
           marginTop: '0.5em',
           '& img': {
-            width: '6em'
+            width: '9em'
           }
         },
 

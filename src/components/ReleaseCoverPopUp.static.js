@@ -5,13 +5,14 @@ const theme = require('~/theme')
 module.exports = declareStaticComponent(__filename, ({ getClassName, createStyleSheet }) => {
 
   const renderHTML = (attrs) => {
+    const releaseText = attrs.text.replace(/\n/g, '<br/>')
     return `
       ${PopUp.renderHTML({ variant: 'popup1', 'class': [ getClassName() ] }, `
         <div class="${getClassName('title')}">
           <span class="${getClassName('releaseId')}">#${attrs.id}</span>
           ${attrs.title}
         </div>
-        <div class="${getClassName('text')}">${attrs.text}</div>
+        <div class="${getClassName('text')}">${releaseText}</div>
         <div class="${getClassName('dateAndChannels')}">released ${attrs.date}</div>
         <div class="${getClassName('dateAndChannels')}">${attrs.channelsDisplay}</div>
       `)}

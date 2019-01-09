@@ -42,10 +42,10 @@ module.exports = declareStaticComponent(__filename, () => {
       `)}
 
       ${ReleaseAnalyticsPopUp.renderHTML({
-        date: '09/12/2018',
+        date: '09/01/2018',
         table: [
           ['Videos Uploaded', '5 (1h30 live performance divided in 5 parts)'],
-          ['Total Plays', '2130']  
+          ['Total Plays', '3155']  
         ]
       })}
 

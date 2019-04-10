@@ -1,11 +1,23 @@
 const declareStaticComponent = require('~/declareStaticComponent')
 const ReleaseCoverPopUp = require('~/components/ReleaseCoverPopUp.static')
 const PopUp = require('~/components/PopUp.static')
+const ReleaseAnalyticsPopUp = require('~/components/ReleaseAnalyticsPopUp.static')
+
 
 module.exports = declareStaticComponent(__filename, () => {
 
   const renderHTML = function(attrs) {
     return `
+
+      ${ReleaseAnalyticsPopUp.renderHTML({
+        date: '10/04/2018',
+        table: [
+          ['Femdom Videos Uploaded', '17 (11 + 6)'],
+          ['Total Plays From Femdom Videos', '25782 (7792 + 17990)'],
+          ['Emails Sent', '1 000 000'],
+          ['Total Plays From Emails', '4'],
+        ]
+      })}
 
       ${PopUp.renderHTML(
         { variant: 'popup2' }, `

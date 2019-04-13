@@ -1,6 +1,7 @@
 const declareStaticComponent = require('~/declareStaticComponent')
 const ReleaseCoverPopUp = require('~/components/ReleaseCoverPopUp.static')
 const PopUp = require('~/components/PopUp.static')
+const MediaPopUp = require('~/components/MediaPopUp.static')
 const ReleaseAnalyticsPopUp = require('~/components/ReleaseAnalyticsPopUp.static')
 
 
@@ -8,6 +9,14 @@ module.exports = declareStaticComponent(__filename, () => {
 
   const renderHTML = function(attrs) {
     return `
+
+      ${MediaPopUp.renderHTML({
+        image: { srcUrl: 'releases/24/screengrab2.jpg' }
+      })}
+      
+      ${MediaPopUp.renderHTML({
+        image: { srcUrl: 'releases/24/screengrab1.jpg' }
+      })}
 
       ${ReleaseAnalyticsPopUp.renderHTML({
         date: '10/04/2018',

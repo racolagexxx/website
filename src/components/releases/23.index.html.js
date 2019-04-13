@@ -10,13 +10,21 @@ module.exports = declareStaticComponent(__filename, () => {
   const renderHTML = function(attrs) {
     return `
 
+      ${MediaPopUp.renderHTML({
+        image: { srcUrl: 'releases/23/screengrab2.jpg' }
+      })}
+      
+      ${MediaPopUp.renderHTML({
+        image: { srcUrl: 'releases/23/screengrab1.jpg' }
+      })}
+      
       ${ReleaseAnalyticsPopUp.renderHTML({
         date: '10/04/2018',
         table: [
           ['Femdom Videos Uploaded', '17 (10 + 7)'],
           ['Total Plays From Femdom Videos', '32819 (5555 + 27264)'],
           ['Emails Sent', '1 000 000'],
-          ['Total Plays From Emails', '202'],
+          ['Total Plays From Emails', '85'],
         ]
       })}
 

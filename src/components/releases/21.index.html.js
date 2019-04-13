@@ -10,6 +10,14 @@ module.exports = declareStaticComponent(__filename, () => {
   const renderHTML = function(attrs) {
     return `
 
+      ${MediaPopUp.renderHTML({
+        image: { srcUrl: 'releases/21/screengrab1.jpg' }
+      })}
+
+      ${MediaPopUp.renderHTML({
+        image: { srcUrl: 'releases/21/screengrab2.jpg' }
+      })}
+
       ${ReleaseAnalyticsPopUp.renderHTML({
         date: '10/04/2018',
         table: [

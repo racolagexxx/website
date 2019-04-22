@@ -1,5 +1,17 @@
 [
   {
+    "id": 25,
+    "date": "20/04/2019",
+    "channels": [["youtube phishing"]],
+    "tags": [],
+    "picture": {
+      "filetype": "jpg",
+      "dimensions": [500, 468]
+    },
+    "title": "Ben Glas - Listening Award (Decomposition)",
+    "text": "\"Listening Award (Decomposition)\" is an experimental noise piece, composed of many layers of repetitious and layered samples of canned audience clap tracks. Through the course of the composition, the piece itself decomposes to reveal a tongue in cheek ending: the sampled audience claps for the listener who has persevered to listen to the complete track."
+  },
+  {
     "id": 24,
     "date": "18/03/2019",
     "channels": [[ "porn-streaming" ], ["email", 1000000]],
@@ -26,7 +38,7 @@
   {
     "id": 22,
     "date": "11/02/2019",
-    "channels": [[ "porn-streaming" ], ["youtube spam"]],
+    "channels": [[ "porn-streaming" ], ["youtube phishing"]],
     "tags": [],
     "picture": {
       "filetype": "gif",

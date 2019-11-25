@@ -1,4 +1,5 @@
 const declareStaticComponent = require('~/declareStaticComponent')
+const PopUp2 = require('./PopUp2.static')
 const PopUp = require('./PopUp.static')
 const PopUpStack = require('./PopUpStack.static')
 const theme = require('~/theme')
@@ -10,8 +11,8 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
       <div class="${getClassName()}" data-htmlfilename="${attrs.htmlFileName}">
         ${PopUpStack.renderHTML(
           { variant: 'messy', reverse: true }, `
-          ${PopUp.renderHTML(
-            { variant: 'popup2' }, `
+          ${PopUp2.renderHTML(
+            {}, `
             <p>loading ...</p>
           `)}
         `)}

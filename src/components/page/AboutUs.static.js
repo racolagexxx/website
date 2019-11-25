@@ -1,4 +1,4 @@
-const PopUp = require('~/components/PopUp.static')
+const PopUp2 = require('~/components/PopUp2.static')
 const MediaPopUp = require('~/components/MediaPopUp.static')
 const PopUpStack = require('~/components/PopUpStack.static')
 const theme = require('~/theme')
@@ -20,7 +20,7 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
 
           ${MediaPopUp.renderHTML(
             {
-              title: '... on porn streaming sites ...',
+              title: 'on porn streaming sites',
               video: {
                 sourceUrls: [
                 'images/documentation/porn-video-release.mp4',
@@ -32,34 +32,36 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
 
           ${MediaPopUp.renderHTML(
             {
-              title: '... through porn ad networks ...',
+              title: 'through porn ad networks',
               image: { srcUrl: 'images/documentation/porn-ad-release.gif' }
             }
           )}
 
-          ${PopUp.renderHTML(
-            { variant: 'popup2', 'class': [ getClassName('popUpTinder') ] }, `
-            <p>... we release on Tinder ...</p>
+          ${PopUp2.renderHTML(
+            { 
+              'class': [ getClassName('popUpTinder') ], 
+              title: 'we release on Tinder'
+            }, `
             <a href="images/documentation/tinder-release.gif" target="_blank">
               ​<picture>
                 <source
                   srcset="images/documentation/tinder-release-small.gif"
                   media="(max-width: 600px)"
                 />
-                <img src="images/documentation/tinder-release.gif" style="max-height:33vw;" />
+                <img src="images/documentation/tinder-release.gif" style="max-height:30vw;" />
               </picture>
             </a>
           `)}
 
           ${MediaPopUp.renderHTML(
             {
-              title: 'we release by email ...',
+              title: 'we release by email',
               image: { srcUrl: 'images/documentation/email-release.gif' }
             }
           )}
 
-          ${PopUp.renderHTML(
-            { variant: 'popup2' }, `
+          ${PopUp2.renderHTML(
+            {}, `
               <p>
                 <b>racolage</b> (French) : practice of forced seduction used to attract a potential customer (in the context of prostitution).
               </p>
@@ -85,18 +87,30 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
         marginBottom: '7em',
         marginTop: '4em',
         '@media screen and (max-width: 500px)': {
-          marginBottom: 'auto',
+          marginBottom: '5em',
           marginTop: 'auto',
+        },
+        [`& .${PopUp2.getClassName()}`]: {
+          minHeight: '40vh',
+        },
+        [`& .${MediaPopUp.getClassName()}`]: {
+          height: '50vh',
         }
       },
 
       popUpContainerInner: {
         width: '65%',
-        height: '100%'
+        height: '100%',
+        '@media screen and (max-width: 500px)': {
+          width: '75%',
+        },
       },
 
       popUpTinder: {
-        textAlign: 'center'
+        textAlign: 'center',
+        [`& .${PopUp2.getClassName('body')}`]: {
+          padding: 0
+        }
       }
 
     })

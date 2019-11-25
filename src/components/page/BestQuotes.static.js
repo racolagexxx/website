@@ -1,5 +1,5 @@
 const BackgroundCanvas = require('~/components/BackgroundCanvas.static')
-const PopUp = require('~/components/PopUp.static')
+const PopUp1 = require('~/components/PopUp1.static')
 const PopUpStack = require('~/components/PopUpStack.static')
 const theme = require('~/theme')
 const declareStaticComponent = require('~/declareStaticComponent')
@@ -14,18 +14,18 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
         ${PopUpStack.renderHTML(
           { 'class': [ getClassName('popUpContainer') ], reverse: true, variant: 'neat'  }, `
 
-          ${PopUp.renderHTML(
-            { variant: 'popup1', class: [ getClassName('PopUp') ] }, `
+          ${PopUp1.renderHTML(
+            { class: [ getClassName('popup') ] }, `
             <div>"I	don't even have an idea why someone would listen to this..." <b>David Niklas</b></div>
           `)}
 
-          ${PopUp.renderHTML(
-            { variant: 'popup1', class: [ getClassName('PopUp') ] }, `
+          ${PopUp1.renderHTML(
+            { class: [ getClassName('popup') ] }, `
             <div>"What brainiac had the st*pid idea to create this website？" <b>@hansenhans</b></div>
           `)}
 
-          ${PopUp.renderHTML(
-            { variant: 'popup1', class: [ getClassName('PopUp') ] }, `
+          ${PopUp1.renderHTML(
+            { class: [ getClassName('popup') ] }, `
             <div>"so @racolagexxx is probably the stupidest way I've ever seen to release music." <b>@shaniber</b></div>
           `)}
 
@@ -47,10 +47,11 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
         zIndex: 2,
       },
 
-      PopUp: {
+      popup: {
         extend: [ theme.responsiveText(120, 0.55) ],
-        '& .container': {
-          minHeight: '8em'
+        [`& .${PopUp1.getClassName('body')}`]: {
+          minHeight: '8em',
+          padding: '0 0.1em'
         },
         '& .content': {
           padding: '0 0.1em'

@@ -1,7 +1,5 @@
 const $ = global.jQuery = require('jquery/dist/jquery.slim.js')
 const declareJsComponent = require('~/declareJsComponent')
-const PopUp = require('./PopUp')
-const LazyImage = require('./LazyImage')
 const ReleaseDetails = require('./ReleaseDetails')
 
 module.exports = declareJsComponent(__filename, ({ getClassName }) => {

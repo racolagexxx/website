@@ -5,16 +5,14 @@ const theme = require('~/theme')
 
 module.exports = declareStaticComponent(__filename, ({ getClassName, createStyleSheet }) => {
 
-  const renderHTML = function(opts, children) {
-    const props = {
-      'class': (opts.class || []).concat([
-        getClassName(),
-      ]).join(' ')
+  const renderHTML = function(props, children) {
+    const htmlAttrs = {
+      'class': [getClassName()].concat(props.class || [])
     }
 
     return `
-      <div ${htmlHelpers.renderAttributes(props)} ${htmlHelpers.renderDataAttributes(opts, ['reverse', 'variant', 'autoResize'])}>
-        ${opts.resetButton ? `<div class="${getClassName('reset')}">
+      <div ${htmlHelpers.renderAttributes(htmlAttrs)} ${htmlHelpers.renderDataAttributes(props, ['reverse', 'variant', 'autoResize'])}>
+        ${props.resetButton ? `<div class="${getClassName('reset')}">
           <button>READ AGAIN</button>
         </div>`: ''}
         ${children}
@@ -32,7 +30,7 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
           position: 'absolute',
           width: '100%',
           top: '0px',
-          '&:first-child': { position: 'static' }
+          '&:first-child': { position: 'relative' }
         }
       },
 

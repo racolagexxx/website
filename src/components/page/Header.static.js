@@ -1,7 +1,7 @@
 const theme = require('~/theme')
 const declareStaticComponent = require('~/declareStaticComponent')
 const BackgroundCanvas = require('~/components/BackgroundCanvas.static')
-const PopUp = require('~/components/PopUp.static')
+const PopUp1 = require('~/components/PopUp1.static')
 const PopUpStack = require('~/components/PopUpStack.static')
 const SocialMedia = require('./SocialMedia.static')
 
@@ -16,8 +16,8 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
         ${PopUpStack.renderHTML(
           { 'class': [ getClassName('popUpContainer') ], variant: 'neat' }, `
 
-          ${PopUp.renderHTML(
-            { variant: 'popup1', class: [ getClassName('PopUp') ] }, `
+          ${PopUp1.renderHTML(
+            { class: [ getClassName('popup') ] }, `
             <a class="title" href="#about">
               <h1>
                 <div><img class="${getClassName('logos')}" src="images/logo.svg" /></div>
@@ -27,8 +27,8 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
             ${SocialMedia.renderHTML()}
           `)}
 
-          ${PopUp.renderHTML(
-            { variant: 'popup1', noClose: true, class: [ getClassName('PopUp') ] }, `
+          ${PopUp1.renderHTML(
+            { class: [ getClassName('popup') ], noClose: true }, `
             <img class="${getClassName('logos')} logo" src="images/logo2.svg" />
           `)}
 
@@ -61,15 +61,16 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
         maxWidth: '15em'
       },
 
-      PopUp: {
+      popup: {
         height: '100%',
 
         /* Popup at the back, with no close button */
         '&:last-child': {
           boxShadow: 'none',
           zIndex: -1,
-          '& .content': {
+          [`& .${PopUp1.getClassName('body')}`]: {
             height: '100%',
+            alignItems: 'center',
             '& img.logo': {
               height: '100%',
               '@media screen and (max-width: 500px)': { width: '80%' }
@@ -77,12 +78,10 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
           }
         },
 
-        '& .container': {
+        [`& .${PopUp1.getClassName('body')}`]: {
           height: '100%',
-          '& .content': {
-            padding: '0 2em',
-            '@media screen and (max-width: 500px)': { padding: '0 0.5em' },
-          }
+          padding: '1.8em 2em',
+          '@media screen and (max-width: 500px)': { padding: '1.8em 0.5em' },
         }
 
       }

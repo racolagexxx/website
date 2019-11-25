@@ -1,7 +1,7 @@
 const declareStaticComponent = require('~/declareStaticComponent')
 const ReleaseCoverPopUp = require('~/components/ReleaseCoverPopUp.static')
 const MediaPopUp = require('~/components/MediaPopUp.static')
-const PopUp = require('~/components/PopUp.static')
+const PopUp2 = require('~/components/PopUp2.static')
 const ReleaseAnalyticsPopUp = require('~/components/ReleaseAnalyticsPopUp.static')
 
 
@@ -22,8 +22,8 @@ module.exports = declareStaticComponent(__filename, () => {
         ]
       })}
 
-      ${PopUp.renderHTML(
-        { variant: 'popup2' }, `
+      ${PopUp2.renderHTML(
+        {}, `
         <p>
           Making good use of our new #YouTube phishing technique for releasing this great noisy track by Ben Glas. The music is played on top of videos of #BTS, #CardiB, #LilDicky, etc ... This is used to phish unsuspecting listeners, which were instead searching for new videos of their favorite pop artists 😲🤩❤️
         </p>

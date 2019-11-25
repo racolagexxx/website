@@ -1,6 +1,11 @@
 exports.renderAttributes = (props) => {
   return Object.entries(props)
-    .map(([ key, value ]) => `${key}="${value}"`).join(' ')
+    .map(([ key, value ]) => {
+      if (key === 'class') {
+        value = (value || []).join(' ')
+      }
+      return `${key}="${value}"`
+    }).join(' ')
 }
 
 exports.renderDataAttributes = (obj, keys) => {

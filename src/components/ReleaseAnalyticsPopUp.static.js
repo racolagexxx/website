@@ -1,5 +1,5 @@
 const declareStaticComponent = require('~/declareStaticComponent')
-const PopUp = require('./PopUp.static')
+const PopUp2 = require('./PopUp2.static')
 
 module.exports = declareStaticComponent(__filename, ({ getClassName, createStyleSheet }) => {
 
@@ -9,8 +9,8 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
     }).join('')
 
     return `
-      ${PopUp.renderHTML(
-        { variant: 'popup2', 'class': [ getClassName() ] }, `
+      ${PopUp2.renderHTML(
+        { 'class': [ getClassName() ] }, `
         <h4 class="${getClassName('title')}">Analytics</h4>
         <table class="${getClassName('table')}">
           ${rows}

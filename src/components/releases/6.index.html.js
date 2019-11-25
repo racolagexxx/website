@@ -2,7 +2,7 @@ const declareStaticComponent = require('~/declareStaticComponent')
 const ReleaseCoverPopUp = require('~/components/ReleaseCoverPopUp.static')
 const ReleaseAnalyticsPopUp = require('~/components/ReleaseAnalyticsPopUp.static')
 const MediaPopUp = require('~/components/MediaPopUp.static')
-const PopUp = require('~/components/PopUp.static')
+const PopUp2 = require('~/components/PopUp2.static')
 
 
 module.exports = declareStaticComponent(__filename, () => {
@@ -25,8 +25,8 @@ module.exports = declareStaticComponent(__filename, () => {
         image: { srcUrl: 'releases/6/screen1.jpg' }
       })}
 
-      ${PopUp.renderHTML(
-        { variant: 'popup2' }, `
+      ${PopUp2.renderHTML(
+        {}, `
         <p>
           For this track, we experimented releasing through Tinder.
           Jane matched with people from different countries and started conversations

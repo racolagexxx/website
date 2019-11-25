@@ -1,7 +1,7 @@
 const declareStaticComponent = require('~/declareStaticComponent')
 const ReleaseCoverPopUp = require('~/components/ReleaseCoverPopUp.static')
 const ReleaseAnalyticsPopUp = require('~/components/ReleaseAnalyticsPopUp.static')
-const PopUp = require('~/components/PopUp.static')
+const PopUp2 = require('~/components/PopUp2.static')
 const MediaPopUp = require('~/components/MediaPopUp.static')
 
 module.exports = declareStaticComponent(__filename, () => {
@@ -21,8 +21,8 @@ module.exports = declareStaticComponent(__filename, () => {
         image: { srcUrl: 'releases/18/screengrab1.jpg' }
       })}
 
-      ${PopUp.renderHTML(
-        { variant: 'popup2' }, `
+      ${PopUp2.renderHTML(
+        {}, `
         <p>L;ç°°ç played a 1h30 long show as part of the second Branlr Room on chatroulette</p> 
         <p><a href="https://www.youtube.com/watch?v=JlmTl4iXbgA" target="_blank">TRAILER</a> | <a href="https://www.youtube.com/watch?v=CzqIWL5GXs8" target="_blank">FULL</a></p>
         <iframe
@@ -34,8 +34,8 @@ module.exports = declareStaticComponent(__filename, () => {
         ></iframe>
       `)}
 
-      ${PopUp.renderHTML(
-        { variant: 'popup2' }, `
+      ${PopUp2.renderHTML(
+        {}, `
         <p>
           This release is a recording from L;ç°°ç exclusive show at Branlr Room which was broadcasted on chatroulette and chaturbate on the 28/10/2018
         </p>

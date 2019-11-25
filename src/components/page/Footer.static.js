@@ -1,7 +1,7 @@
 const theme = require('~/theme')
 const declareStaticComponent = require('~/declareStaticComponent')
 const BackgroundCanvas = require('~/components/BackgroundCanvas.static')
-const PopUp = require('~/components/PopUp.static')
+const PopUp1 = require('~/components/PopUp1.static')
 const SocialMedia = require('./SocialMedia.static')
 
 module.exports = declareStaticComponent(__filename, ({ getClassName, createStyleSheet }) => {
@@ -14,8 +14,8 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
 
         <div class="${getClassName('popUpContainer')}">
 
-          ${PopUp.renderHTML(
-            { variant: 'popup1', noClose: true }, `
+          ${PopUp1.renderHTML(
+            { noClose: true }, `
             <div class="${getClassName('popUpInner')}">
               <ul class="menu">
                 <li><a href="#about">__About</a></li>
@@ -56,6 +56,10 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
             paddingRight: '0.5em',
             marginRight: '0.5em',
           }
+        },
+
+        [`& .${PopUp1.getClassName('body')}`]: {
+          padding: '1.8em 0'
         }
       },
 

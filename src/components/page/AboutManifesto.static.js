@@ -1,4 +1,4 @@
-const PopUp = require('~/components/PopUp.static')
+const PopUp2 = require('~/components/PopUp2.static')
 const MediaPopUp = require('~/components/MediaPopUp.static')
 const PopUpStack = require('~/components/PopUpStack.static')
 const theme = require('~/theme')
@@ -27,8 +27,8 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
             { image: { srcUrl: 'images/about-images/dont-email-my-wife.jpg' } }
           )}
 
-          ${PopUp.renderHTML(
-            { variant: 'popup2' }, `
+          ${PopUp2.renderHTML(
+            {}, `
             <p>
               <quote>
               <i class="doubleQuoteOpen">“</i>If I told you there was a great way to promote your band all over the net, for free, you'd probably think, 'Yeah, what's the catch？' <i class="doubleQuoteClose">”</i> <a href="http://www.arkade.com/content/Content/Marketing+Your+Product/You've+got+to+be+seen+to+be+heard!!+Tips+on+how+to+link+to+your+site+on+Arkade" target="_blank">[read more]</a>
@@ -52,8 +52,8 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
             { image: { srcUrl: 'images/about-images/the-hammer.jpg' } }
           )}
 
-          ${PopUp.renderHTML(
-            { variant: 'popup2' }, `
+          ${PopUp2.renderHTML(
+            {}, `
             <p>
               <quote>
               <i class="doubleQuoteOpen">“</i>Think of yourself as Jessica Simpson or Kim Kardashian. These women understand that they are brands and can put their names on a product, from shoes to lotion, knowing that it will sell big just because of who they are. <i class="doubleQuoteClose">”</i> <a href="http://www.wikihow.com/Promote-Your-Music" target="_blank">[read more]</a>
@@ -72,8 +72,8 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
             { image: { srcUrl: 'images/about-images/spamming-lord-much-on-soundcloud.jpg' } }
           )}
 
-          ${PopUp.renderHTML(
-            { variant: 'popup2' }, `
+          ${PopUp2.renderHTML(
+            {}, `
             <p>
               <quote>
               <i class="doubleQuoteOpen">“</i>Musicians today are accustomed to waiting in line for just about everything. After all, it’s busy as hell out there. While it’s necessary to wait in some lines, and good results can come of that, if you merely play by the rules and wait in lines you’ll get stagnancy, and that isn’t a very fun gift to open up for Christmas.<i class="doubleQuoteClose">”</i> <a href="http://www.musicthinktank.com/blog/11-reasons-why-your-music-self-promotion-isnt-working.html" target="_blank">[read more]</a>
@@ -92,8 +92,8 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
             { image: { srcUrl: 'images/about-images/dont-pretend-you-dont-want-me.jpg' } }
           )}
 
-          ${PopUp.renderHTML(
-            { variant: 'popup2' }, `
+          ${PopUp2.renderHTML(
+            {}, `
             <p>
               <quote>
               <i class="doubleQuoteOpen">“</i>When people leave your show, are they going to remember you as that person with good lyrics and a good voice？ Or will they remember you as that person who stood out and outshone all the other performing acts that night？<i class="doubleQuoteClose">”</i> <a href="http://www.musicthinktank.com/blog/how-to-promote-your-music-the-ultimate-guide.html" target="_blank">[read more]</a>
@@ -104,15 +104,15 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
             </p>
           `)}
 
-          ${PopUp.renderHTML(
-            { variant: 'popup2' }, `
+          ${PopUp2.renderHTML(
+            {}, `
             <p>
               The following is a compilation of music promotion advices <b>found online</b>.
             </p>
           `)}
 
-          ${PopUp.renderHTML(
-            { variant: 'popup2' }, `
+          ${PopUp2.renderHTML(
+            {}, `
             <p>
               If you are interested in releasing a track with racolage.xxx, contact us directly on facebook, twitter,
               or send an email to <a href="mailto://racolagexxx@protonmail.com">racolagexxx@protonmail.com</a>
@@ -136,11 +136,25 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
   const renderCSS = function() {
     createStyleSheet({
       '': {
-        extend: [ theme.centerFlexContent() ]
+        extend: [ theme.centerFlexContent() ],
+        marginBottom: '7em',
+        '@media screen and (max-width: 500px)': {
+          marginBottom: '5em',
+        },
+
+        [`& .${PopUp2.getClassName()}`]: {
+          minHeight: '40vh',
+        },
+        [`& .${MediaPopUp.getClassName()}`]: {
+          height: '50vh',
+        }
       },
       popUpContainerInner: {
-        width: '69%',
-        height: '100%'
+        width: '65%',
+        height: '100%',
+        '@media screen and (max-width: 500px)': {
+          width: '75%',
+        },
       },
       bulletList: {
         listStyle: 'circle',

@@ -1,5 +1,5 @@
 const declareStaticComponent = require('~/declareStaticComponent')
-const PopUp = require('./PopUp.static')
+const PopUp1 = require('./PopUp1.static')
 const theme = require('~/theme')
 
 module.exports = declareStaticComponent(__filename, ({ getClassName, createStyleSheet }) => {
@@ -7,7 +7,7 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
   const renderHTML = (attrs) => {
     const releaseText = attrs.text.replace(/\n/g, '<br/>')
     return `
-      ${PopUp.renderHTML({ variant: 'popup1', 'class': [ getClassName() ] }, `
+      ${PopUp1.renderHTML({ 'class': [ getClassName() ] }, `
         <div class="${getClassName('title')}">
           <span class="${getClassName('releaseId')}">#${attrs.id}</span>
           ${attrs.title}

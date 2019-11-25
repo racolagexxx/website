@@ -4,6 +4,8 @@ const { sheets } = require('jss')
 // Import all these so the components gets declared and CSS gets collected 
 const BackgroundCanvas = require('~/components/BackgroundCanvas.static')
 const PopUp = require('~/components/PopUp.static')
+const PopUp1 = require('~/components/PopUp1.static')
+const PopUp2 = require('~/components/PopUp2.static')
 const PopUpStack = require('~/components/PopUpStack.static')
 const Release = require('~/components/Release.static')
 const ReleaseDetails = require('~/components/ReleaseDetails.static')

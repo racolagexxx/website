@@ -1,16 +1,14 @@
 const declareStaticComponent = require('~/declareStaticComponent')
-const PopUp = require('./PopUp.static')
+const PopUp2 = require('./PopUp2.static')
 
 
 module.exports = declareStaticComponent(__filename, ({ getClassName, createStyleSheet }) => {
 
-  const renderHTML = (attrs) => {
-    let mediaElement, titleElement = ''
-    if (attrs.title)
-      titleElement = `<p>${attrs.title}</p>`
+  const renderHTML = (props) => {
+    let mediaElement
 
-    if (attrs.video) {
-      const sourceElements = attrs.video.sourceUrls.map((sourceUrl) => {
+    if (props.video) {
+      const sourceElements = props.video.sourceUrls.map((sourceUrl) => {
         const extension = sourceUrl.split('.').slice(-1)[0]
         return `
           <source
@@ -26,19 +24,18 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
           Video not supported.
         </video>
       `
-    } else if (attrs.image) {
+    } else if (props.image) {
       mediaElement = `
-        <a href="${attrs.image.srcUrl}" target="_blank">
-          <img class="${getClassName('media')}" src="${attrs.image.srcUrl}" />
+        <a class="${getClassName('mediaLink')}" href="${props.image.srcUrl}" target="_blank">
+          <img class="${getClassName('media')}" src="${props.image.srcUrl}" />
         </a>
       `
     } else
       throw new Error('invalid attributes for media popup')
 
     return `
-      ${PopUp.renderHTML(
-        { variant: 'popup2', class: [ getClassName() ] }, `
-        ${titleElement}
+      ${PopUp2.renderHTML(
+        { class: [ getClassName() ], title: props.title }, `
         ${mediaElement}
       `)}
     `
@@ -49,15 +46,20 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
 
       '': {
         textAlign: 'center',
+        [`& .${PopUp2.getClassName('body')}`]: {
+          padding: 0,
+        },
+      },
+
+      mediaLink: {
+        height: '100%'
       },
 
       media: {
-        // Padding for making it easier to click on "close" button on small screen
-        marginTop: '10px',
-        height: 'auto',
+        maxHeight: '100%',
         maxWidth: '100%',
-        maxHeight: '80vh'
       }
+
     })
   }
 

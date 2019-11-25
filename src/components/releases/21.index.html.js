@@ -1,6 +1,6 @@
 const declareStaticComponent = require('~/declareStaticComponent')
 const ReleaseCoverPopUp = require('~/components/ReleaseCoverPopUp.static')
-const PopUp = require('~/components/PopUp.static')
+const PopUp2 = require('~/components/PopUp2.static')
 const MediaPopUp = require('~/components/MediaPopUp.static')
 const ReleaseAnalyticsPopUp = require('~/components/ReleaseAnalyticsPopUp.static')
 
@@ -28,8 +28,8 @@ module.exports = declareStaticComponent(__filename, () => {
         ]
       })}
 
-      ${PopUp.renderHTML(
-        { variant: 'popup2' }, `
+      ${PopUp2.renderHTML(
+        {}, `
         <p>
           Part 1/4 from <b>ivvill - cutyou</b> the first ever EP released on racolage.xxx. 
         </p>

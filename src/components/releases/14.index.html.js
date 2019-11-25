@@ -2,7 +2,7 @@ const declareStaticComponent = require('~/declareStaticComponent')
 const ReleaseCoverPopUp = require('~/components/ReleaseCoverPopUp.static')
 const ReleaseAnalyticsPopUp = require('~/components/ReleaseAnalyticsPopUp.static')
 const MediaPopUp = require('~/components/MediaPopUp.static')
-const PopUp = require('~/components/PopUp.static')
+const PopUp2 = require('~/components/PopUp2.static')
 
 module.exports = declareStaticComponent(__filename, () => {
 
@@ -25,8 +25,8 @@ module.exports = declareStaticComponent(__filename, () => {
         image: { srcUrl: 'releases/14/screengrab1.jpg' }
       })}
 
-      ${PopUp.renderHTML(
-        { variant: 'popup2' }, `
+      ${PopUp2.renderHTML(
+        {}, `
         <p>Lijnenspel + Lindred played as part of the first Branlr Room on chaturbate: <a href="https://www.youtube.com/watch?v=8Jm1DFBuHEo" target="_blank">VIDEO</a></p>
         <iframe
           width="100%" height="auto"

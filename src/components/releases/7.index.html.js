@@ -1,5 +1,4 @@
 const declareStaticComponent = require('~/declareStaticComponent')
-const PopUp = require('~/components/PopUp.static')
 const ReleaseCoverPopUp = require('~/components/ReleaseCoverPopUp.static')
 const ReleaseAnalyticsPopUp = require('~/components/ReleaseAnalyticsPopUp.static')
 const MediaPopUp = require('~/components/MediaPopUp.static')

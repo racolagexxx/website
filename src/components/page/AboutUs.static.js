@@ -20,6 +20,18 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
 
           ${MediaPopUp.renderHTML(
             {
+              title: '... with YouTube phishing videos ...',
+              video: {
+                sourceUrls: [
+                'images/documentation/youtube-phishing.mp4',
+                'images/documentation/youtube-phishing.webm'
+                ]
+              }
+            }
+          )}
+
+          ${MediaPopUp.renderHTML(
+            {
               title: '... on porn streaming sites ...',
               video: {
                 sourceUrls: [
@@ -82,7 +94,7 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
       '': {
         extend: [ theme.centerFlexContent() ],
         justifyContent: 'flex-start',
-        marginBottom: '7em',
+        marginBottom: '2em',
         marginTop: '4em',
         '@media screen and (max-width: 500px)': {
           marginBottom: 'auto',

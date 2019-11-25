@@ -10,6 +10,7 @@ const Releases = require('./Releases.static')
 const AboutHeader = require('./AboutHeader.static')
 const BestQuotes = require('./BestQuotes.static')
 const AboutUs = require('./AboutUs.static')
+const AboutBranlrRoom = require('./AboutBranlrRoom.static')
 const AboutManifesto = require('./AboutManifesto.static')
 const Footer = require('./Footer.static')
 
@@ -45,6 +46,7 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
           <div id="about"></div>
           ${AboutHeader.renderHTML()}
           ${AboutUs.renderHTML()}
+          ${AboutBranlrRoom.renderHTML()}
           ${AboutManifesto.renderHTML()}
 
           ${Footer.renderHTML()}

@@ -23,6 +23,28 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
       <html lang="en">
         <head>
           <title>racolage.xxx</title>
+          <meta
+              name="description"
+              content="racolage.xxx is a record label that releases experimental music through spam email, porn streaming sites, tinder, and other spammy release channels..."
+          />
+          <meta
+              property="og:image"
+              content="https://racolage.xxx/images/racolagexxx-og.png"
+          />
+          <meta
+              property="og:url"
+              content="https://racolage.xxx"
+          />
+          <meta
+              property="og:title"
+              content="racolage.xxx"
+          />
+          <meta
+              property="og:description"
+              content="racolage.xxx is a record label that releases experimental music through spam email, porn streaming sites, tinder, and other spammy release channels..."
+          />
+          <meta name="twitter:card" content="summary_large_image" />  
+
           <meta charset="utf-8">
           <meta http-equiv="X-UA-Compatible" content="IE=edge">
           <meta name="viewport" content="width=device-width, initial-scale=1">

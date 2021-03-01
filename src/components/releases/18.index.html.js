@@ -27,6 +27,7 @@ module.exports = declareStaticComponent(__filename, () => {
         <p><a href="https://www.youtube.com/watch?v=JlmTl4iXbgA" target="_blank">TRAILER</a> | <a href="https://www.youtube.com/watch?v=CzqIWL5GXs8" target="_blank">FULL</a></p>
         <iframe
           width="100%" height="auto"
+          style="min-height:50vh;"
           src="https://www.youtube.com/embed/JlmTl4iXbgA"
           frameborder="0"
           allow="autoplay; encrypted-media"

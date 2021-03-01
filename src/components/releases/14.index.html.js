@@ -30,6 +30,7 @@ module.exports = declareStaticComponent(__filename, () => {
         <p>Lijnenspel + Lindred played as part of the first Branlr Room on chaturbate: <a href="https://www.youtube.com/watch?v=8Jm1DFBuHEo" target="_blank">VIDEO</a></p>
         <iframe
           width="100%" height="auto"
+          style="min-height:50vh;"
           src="https://www.youtube.com/embed/8Jm1DFBuHEo"
           frameborder="0"
           allow="autoplay; encrypted-media"

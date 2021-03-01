@@ -36,6 +36,7 @@ module.exports = declareStaticComponent(__filename, () => {
         </p>
         <iframe
           width="100%" height="auto"
+          style="min-height:50vh;"
           src="https://www.youtube.com/embed/v5XNuV8vb-g"
           frameborder="0"
           allow="autoplay; encrypted-media"

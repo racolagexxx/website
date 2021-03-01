@@ -22,6 +22,19 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
             { variant: 'popup2' }, `
             <iframe
               width="100%" height="auto"
+              style="min-height:50vh;"
+              src="https://www.youtube.com/embed/3BL4zVauDBk"
+              frameborder="0"
+              allow="autoplay; encrypted-media"
+              allowfullscreen
+            ></iframe>
+          `)}
+
+          ${PopUp.renderHTML(
+            { variant: 'popup2' }, `
+            <iframe
+              width="100%" height="auto"
+              style="min-height:50vh;"
               src="https://www.youtube.com/embed/8Jm1DFBuHEo"
               frameborder="0"
               allow="autoplay; encrypted-media"
@@ -33,6 +46,7 @@ module.exports = declareStaticComponent(__filename, ({ getClassName, createStyle
             { variant: 'popup2' }, `
             <iframe
               width="100%" height="auto"
+              style="min-height:50vh;"
               src="https://www.youtube.com/embed/JlmTl4iXbgA"
               frameborder="0"
               allow="autoplay; encrypted-media"
